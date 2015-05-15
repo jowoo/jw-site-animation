@@ -1,0 +1,108 @@
+@mixin box-sprite($bullet-icon, $padding:1em) {
+  padding-left: $padding;
+  background: image-url($bullet-icon) no-repeat 0px 0px;
+}
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+      .icon-box {
+        background-color:$hover;
+      }
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+      .icon-box {
+        background-color:$active;
+      }
+    }
+  }
+}
+
+@mixin sprite-hover($image-name) {
+  @if $image-name {
+    :hover {
+      background-position:0px -image-height($image-name);
+    }
+
+    :active {
+      background-position:0px -image-height($image-name);
+    }
+  }
+}
+
+@mixin set-min-height($height:1em) {
+  min-height: $height;
+  height:auto !important;
+  height: $height;
+}
+
+@mixin list-box($width:10px, $height:10px, $margin:0.5em) {
+  float:left;
+  border: 1px solid black;
+  margin-right:$margin;
+  width:  $width;
+  height: $height;
+}
+
+@mixin align-text($pos:right) {
+  text-align: $pos;
+}
+
+@mixin padding($top:0em, $right:0em, $bottom:0em, $left:0em) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin margin($top:0em, $right:0em, $bottom:0em, $left:0em) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin vertical-border($width:1px, $colour:white) {
+  border-left: 0;
+  border-right: 0;
+  border-top:$width solid $colour;
+  border-bottom:$width solid $colour;
+}
+
+@mixin horizontal-border($width:1px, $colour:white) {
+  border-top: 0;
+  border-bottom: 0;
+  border-left:$width solid $colour;
+  border-right:$width solid $colour;
+}
+//IE 10 Fixes
+@mixin opacity-filter($val:0) {
+  filter: alpha(opacity=$val*100);
+  @include opacity($val);
+}
+
+@mixin background-image-with-ms($image) {
+    @include background-image($image); // Compass default version, for everything but IE 10.
+    background-image: -ms-#{$image}; // Vendor prefixes for IE 10.
+}
+//
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (min-width: $screen-xs) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media (min-width: $screen-sm) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media (min-width: $screen-md) { @content; }
+  }
+}

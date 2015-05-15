@@ -1,0 +1,39 @@
+$screen-sm-half:            460px !default;
+$screen-sm-half-min:        $screen-sm-half;
+$screen-md-sm:              748px !default;
+$screen-md-sm-min:          $screen-md-sm;
+$screen-lg-md:              1025px !default;
+$screen-lg-md-min:          $screen-lg-md;
+
+// banner vars
+$banner-width: 1024px;
+$banner-height: 425px;
+$banner-padding: 10px;
+$banner-color: #000;
+//$banner-border: darken($banner-color, 50%);
+$banner-border: #000;
+// Text
+$font-family: 'Rubrik';
+$font-family-regular: 'Rubrik';
+$font-family-semi-bold: 'Rubrik Semi Bold';
+$text-colour: #fff;
+$text-size-huge: 65px;
+$text-size-large: 40px;
+$text-size-mid: 25px;
+$text-size-reg: 20px;
+$text-size-small-ish: 17px;
+$text-size-small: 15px;
+$text-spacing: 0;
+$text-top: 0;
+$text-bottom: $banner-height;
+$line-height: $text-size-mid - 1;
+//
+$screen-xs:                 320px !default;
+$screen-xs-min:             $screen-xs;
+$screen-sm:                 768px !default;
+$screen-sm-min:             $screen-sm;
+$screen-md:                 1025px !default;
+$screen-md-min:             $screen-md;
+$screen-md-content:         1000px;
+$screen-lg:                 190000px !default;
+$screen-lg-min:             $screen-lg;

@@ -1,0 +1,18 @@
+.ufo-container {
+    // Utils
+    .center {
+        display: block;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+}
