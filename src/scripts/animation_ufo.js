@@ -1,3 +1,5 @@
+'use strict';
+
 var Animation = {
 
     /**
@@ -6,8 +8,8 @@ var Animation = {
      *
      **/
 
-    init: function() {
-        TweenLite.delayedCall(0.25, function(scope) {
+    init: function () {
+        TweenLite.delayedCall(0.25, function (scope) {
             
             $('.ufo-container__content').toggleClass('hide show');
 
